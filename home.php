@@ -40,7 +40,7 @@ $bestSellers = array_slice($products,6,2);
 ?>
 
 <section class="home">
-    <div class="container">
+    <div class="container pos-rel">
         <div class="left-wrapp">
             <div class="sidebar">
                 <div class="sidebar-title">categories</div>

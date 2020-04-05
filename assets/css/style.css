@@ -13,7 +13,7 @@ body{font: 15px/140% Arial, sans-serif;}
 .nav-menu span:hover,.nav-menu a:hover{opacity:0.7}
 
 .left-wrapp{float:left;width:300px;margin-top:-55px;}
-.right-wrapp{float:right;width:calc(100% - 330px);}
+.right-wrapp{float:right;width:calc(100% - 330px);padding:15px 0 0}
 
 .sidebar{margin:0 0 30px}
 .sidebar-title{font-size:33px;line-height:55px;background:#62abbc;color:#fff;font-weight:600;text-transform:uppercase;padding:0 15px}
@@ -45,3 +45,18 @@ body{font: 15px/140% Arial, sans-serif;}
 .product-card .price .og-price{font-size:15px;line-height:30px;}
 .product-card .cta{display:inline-block;padding:10px 25px;background-color:#f56256;font-size:15px;color:#fff;font-weight:500;border:1px solid #f56256}
 .product-card:hover .cta{background:transparent;color:#f56256}
+
+.no-results{padding:10px 0}
+
+@media (max-width:1024px){
+    .left-wrapp {float: none;width: 300px;position: absolute;top:0;z-index: 1;}
+    .best-seller,.sidebar-menu{display:none}
+    .sidebar-title{cursor:pointer;}
+    .right-wrapp{float:none;width:100%;padding:0}
+}
+
+@media (max-width:767px){
+    .search-form{position: relative;transform: none;width: 100%;right: auto;top: 10px;}
+    .nav-menu{height:55px}
+    .nav-menu .main-menu{display: none;}
+}

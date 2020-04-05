@@ -21,7 +21,7 @@
                 <img src="<?php echo  $imgPath . $response['site']['logo']; ?>" />
             </a>
         </h1>
-        <form action="/category/" class="search-form" method="get" autocomplete="off">
+        <form action="search.php" class="search-form" method="get" autocomplete="off">
             <input type="text" class="search-input" placeholder="search" name="s" value="" required />
             <input type="submit" class="search-submit" value="" />
         </form>

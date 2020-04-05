@@ -1,5 +1,6 @@
 <?php
 
+
 function getBaseUrl() 
 {
     $currentPath = $_SERVER['PHP_SELF']; 
@@ -30,4 +31,20 @@ function element($fileName,$variables = []){
 	}
 	include(locate_template("elements/$fileName"));
 	return ob_get_clean();
+}
+
+function getProducts($products, $filter = ''){
+	$result = array_filter($products, function ($item) use ($filter) {
+		if ((stripos($item['title'], $filter) !== false) ||
+			(stripos($item['category'], $filter) !== false) ||
+			(stripos($item['tags'], $filter) !== false) ||
+			(similar_text($item['title'], $filter) > 2 || 
+			similar_text($item['category'], $filter) > 2 || 
+			similar_text($item['tags'], $filter) > 2 )) {
+			return true;
+		}
+		return false;
+	});
+
+	return $result;
 }

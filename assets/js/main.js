@@ -3,6 +3,12 @@ $(document).ready(function(){
         $(this).siblings().slideToggle();
     });
 
+    $(document).on('click','.sidebar-title',function(){
+        if (window.innerWidth <= 1024) {
+            $('.sidebar-menu').slideToggle();
+        }
+    });
+
     $("#hero-banner-slider").slick({
         infinite: true,
         arrows: false,
