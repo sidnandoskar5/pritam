@@ -4,49 +4,50 @@ global $products;
 
 $categories = [
     [
-        'label' => 'CD/DVD drives',
-        'clickUrl' => '#'
+        'label' => 'DESKTOP',
+        'clickUrl' => 'search.php?s=desktop'
     ],
     [
-        'label' => 'HARD DRIVES',
-        'clickUrl' => '#'
+        'label' => 'LAPTOP',
+        'clickUrl' => 'search.php?s=laptop'
     ],
     [
-        'label' => 'MONITORS',
-        'clickUrl' => '#'
+        'label' => 'KEYBOARD',
+        'clickUrl' => 'search.php?s=keyboard'
     ],
     [
-        'label' => 'MOTHERBOARDS',
-        'clickUrl' => '#',
+        'label' => 'MOUSE',
+        'clickUrl' => 'search.php?s=mouse',
     ],
     [
-        'label' => 'SOFTWARE',
-        'clickUrl' => '#'
+        'label' => 'PRINTER',
+        'clickUrl' => 'search.php?s=printer'
     ],
     [
-        'label' => 'VIDEO ADAPTERS',
-        'clickUrl' => '#'
+        'label' => 'CABLE',
+        'clickUrl' => 'search.php?s=cable'
     ],
     [
-        'label' => 'SOFTWARE',
-        'clickUrl' => '#'
+        'label' => 'THUMB DEVICE',
+        'clickUrl' => 'search.php?s=thumb+device'
     ],
     [
-        'label' => 'VIDEO ADAPTERS',
-        'clickUrl' => '#'
+        'label' => 'HARD DISK',
+        'clickUrl' => 'search.php?s=hard+disk'
     ],
     [
-        'label' => 'SOFTWARE',
-        'clickUrl' => '#'
+        'label' => 'CCTV CAMERA AND ACCESSORIES',
+        'clickUrl' => 'search.php?s=cctv+camera+accessories'
     ],
     [
-        'label' => 'VIDEO ADAPTERS',
-        'clickUrl' => '#'
+        'label' => 'GST BILLING SOFTWARE',
+        'clickUrl' => 'search.php?s=gst+billing+software'
     ]
 ];
 
 $products = [
     [
+        'id'=> '1',
         'title' => 'Monitor product',
         'description' => ['',''],
         'originalPrice' => 'Rs. 70000',
@@ -57,6 +58,7 @@ $products = [
         'img' => 'monitor.png',
     ],
     [
+        'id'=> '2',
         'title' => 'Speaker product',
         'description' => ['',''],
         'originalPrice' => 'Rs. 70000',
@@ -67,6 +69,7 @@ $products = [
         'img' => 'speaker.png',
     ],
     [
+        'id'=> '3',
         'title' => 'Keyboard product',
         'description' => ['',''],
         'originalPrice' => 'Rs. 70000',

@@ -38,9 +38,9 @@ function getProducts($products, $filter = ''){
 		if ((stripos($item['title'], $filter) !== false) ||
 			(stripos($item['category'], $filter) !== false) ||
 			(stripos($item['tags'], $filter) !== false) ||
-			(similar_text($item['title'], $filter) > 2 || 
-			similar_text($item['category'], $filter) > 2 || 
-			similar_text($item['tags'], $filter) > 2 )) {
+			(similar_text($item['title'], $filter) > 3 || 
+			similar_text($item['category'], $filter) > 3 || 
+			similar_text($item['tags'], $filter) > 3 )) {
 			return true;
 		}
 		return false;

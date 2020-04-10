@@ -5,9 +5,9 @@ $banners = [
         'bannerImg' => 'mac.jpg',
         'clickUrl' => '#',
         'bannertext' => [
-            'textBig' => 'cenas tristiq lue orci ac sem',
+            'textBig' => '',
             'highlight' => 'Mac',
-            'textSmall' => 'Lorem ipsum dolor sit  amet consectetuer',
+            'textSmall' => '',
             'textMini' => 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia.'
         ]
     ],
