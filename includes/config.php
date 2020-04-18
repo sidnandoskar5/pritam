@@ -14,11 +14,11 @@ $imgPath = $baseURL . 'assets/img/';
 
 $response = [
     'site' => [
-        'sitename' => ['computer','shopper'],
-        'logo' => 'SC1.JPEG',
+        'sitename' => ['Siddhesh','Computer'],
+        'logo' => '00.png',
         'favicon' => '',
         'siteurl' => '/',
-        'siteTitle' => 'Computer Shopper',
+        'siteTitle' => 'Siddhesh Computer',
         'siteInitials' => 'cs'
     ],
     'assets' => [
