@@ -48,3 +48,14 @@ function getProducts($products, $filter = ''){
 
 	return $result;
 }
+
+function getProductsDetails($products, $id = ''){
+	$result = array_filter($products, function ($item) use ($id) {
+		if ($item['id'] == $id) {
+			return true;
+		}
+		return false;
+	});
+
+	return $result;
+}

@@ -4,9 +4,7 @@ $(document).ready(function(){
     });
 
     $(document).on('click','.sidebar-title',function(){
-        if (window.innerWidth <= 1024) {
-            $('.sidebar-menu').slideToggle();
-        }
+        $('.sidebar-menu').slideToggle();
     });
 
     $("#hero-banner-slider").slick({

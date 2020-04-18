@@ -27,8 +27,14 @@
         </form>
     </div>
 </header>
-<nav class="nav-menu">
+<nav class="nav-menu pos-rel">
     <div class="container">
         <?php echo getMenu($response['menu'],'main-menu'); ?>
     </div>
 </nav>
+<div class="sidebar">
+    <div class="sidebar-title">categories</div>
+    <nav class="sidebar-menu">
+        <?php echo getMenu($categories,'main-menu'); ?>
+    </nav>
+</div>

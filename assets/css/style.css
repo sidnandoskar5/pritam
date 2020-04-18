@@ -12,12 +12,12 @@ body{font: 15px/140% Arial, sans-serif;}
 .nav-menu .main-menu .sub-menu{position:absolute;top:45px;left:0;padding:10px;background:#f56256;display:none;}
 .nav-menu span:hover,.nav-menu a:hover{opacity:0.7}
 
-.left-wrapp{float:left;width:300px;margin-top:-55px;}
-.right-wrapp{float:right;width:calc(100% - 330px);padding:15px 0 0}
+.left-wrapp{float:left;width:300px;}
+.right-wrapp{float:right;width:calc(100% - 330px)}
 
-.sidebar{margin:0 0 30px}
-.sidebar-title{font-size:33px;line-height:55px;background:#62abbc;color:#fff;font-weight:600;text-transform:uppercase;padding:0 15px}
-.sidebar-menu{font-size:20px;line-height: 30px;font-weight:600;text-transform:uppercase;}
+.sidebar{position: relative;top: -55px;display: inline-block;left:calc((100% - 1180px) / 2)}
+.sidebar-title{font-size:33px;line-height:55px;background:#62abbc;color:#fff;font-weight:600;text-transform:uppercase;padding:0 15px;cursor:pointer;}
+.sidebar-menu{font-size:20px;line-height: 30px;font-weight:600;text-transform:uppercase;display:none;position:absolute;top:55px;z-index:1}
 .sidebar-menu li a{display:block;padding:10px 15px;background:#f5f6f6;border:1px solid #fff;transition:0.4s all;}
 .sidebar-menu li a:hover{background:#62abbc;color:#fff;}
 
@@ -39,7 +39,8 @@ body{font: 15px/140% Arial, sans-serif;}
 .sec-title{font-size:30px;line-height:40px;margin-bottom:30px;font-weight:700;color:#f56256;text-transform:uppercase;}
 
 .product-card{padding:15px;border:1px solid #ccc;margin-bottom:30px}
-.product-card .img-wrapper{width:300px;max-width:100%;margin:0 auto 15px;}
+.product-card .img-wrapper{width:200px; height:200px;max-width:100%;margin:0 auto 15px;position:relative}
+.product-card .img-wrapper img{position:relative;top:50%;transform:translateY(-50%);max-height:100%}
 .product-card .title{font-size:25px;line-height:30px;color:#333;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;margin-bottom:5px}
 .product-card .price{font-size:20px;line-height:26px;color:#62abbc;margin-bottom:5px}
 .product-card .price .og-price{font-size:15px;line-height:30px;}
@@ -48,9 +49,27 @@ body{font: 15px/140% Arial, sans-serif;}
 
 .no-results{padding:10px 0}
 
+.pg-content h2{font-size:40px;line-height:50px;font-weight:700;color:#f56256;margin:20px 0;text-align:center;}
+.pg-content .content-wrapper{font-size:25px;line-height:35px;color:#333;text-align:left;}
+.pg-content .content-wrapper p{margin-bottom:10px}
+
+.pg-content .input-wrapper{margin:0 0 20px}
+.pg-content .input-block{width:100%;height:45px;border:1px solid #ccc;padding:0 10px;border-radius:10px;resize:none}
+.pg-content .text-area-block{height:200px;padding:10px}
+.pg-content .input-submit-wrapp{text-align:center;}
+.pg-content .input-submit{background:#f56256;padding:17px 40px;color:#fff;border-radius:10px;cursor:pointer;border:1px solid transparent}
+.pg-content .input-submit:hover{color:#f56256;border-color:#f56256;background:#fff}
+
+.main-product{margin-bottom:20px}
+.main-product .img-wrapper{width:400px;float:left;border:1px solid #ccc}
+.main-product .content-wrapper{float:right;width:calc(100% - 430px)}
+.main-product .title{font-size:22px;line-height:32px;font-weight:700;columns: #f56256;margin-bottom:10px;}
+.main-product .description{font-size:14px;line-height:24px;}
+.main-product .description p{margin-bottom:5px}
+.main-product .price{font-size:20px;line-height:30px;color:#f56256;font-weight:500}
+
 @media (max-width:1024px){
     .left-wrapp {float: none;width: 300px;position: absolute;top:0;z-index: 1;}
-    .best-seller,.sidebar-menu{display:none}
     .sidebar-title{cursor:pointer;}
     .right-wrapp{float:none;width:100%;padding:0}
 }

@@ -40,11 +40,11 @@ $response = [
         ],
         [
             'label' => 'About Us',
-            'clickUrl' => '#'
+            'clickUrl' => '/about.php'
         ],
         [
             'label' => 'Contact Us',
-            'clickUrl' => '#'
+            'clickUrl' => '/contact.php'
         ],
     ],
 ];

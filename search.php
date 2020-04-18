@@ -3,16 +3,35 @@
 $filter = $_GET['s'];
 $productList = getProducts($products, $filter);
 $newProducts = array_slice($products,0,6);
+$bestSellers = array_slice($products,6,2);
 ?>
 
 <section class="container pos-rel">
     <div class="left-wrapp">
-        <div class="sidebar">
-            <div class="sidebar-title">categories</div>
-            <nav class="sidebar-menu">
-                <?php echo getMenu($categories,'main-menu'); ?>
-            </nav>
+        <?php if(!empty($bestSellers)): ?>
+        <div class="best-seller">
+            <div class="sec-title">Best Sellers</div>
+            <div class="row">
+                <?php foreach($bestSellers as $product): ?>
+                    <div class="col-md-12">
+                        <a class="product-card disp-b" href='<?php echo $product['clickUrl']; ?>'>
+                            <div class="img-wrapper">
+                                <img src="<?php echo $imgPath . $product['img'] ?>" alt="<?php echo $product['title']; ?>" class="img-responsive">
+                            </div>
+                            <div class="content-wrapper">
+                                <div class="title"><?php echo $product['title']; ?></div>
+                                <div class="price">
+                                    <span class="og-price"><?php //echo $product['originalPrice']; ?></span>
+                                    <span class="sell-price"><?php echo $product['sellPrice']; ?></span>
+                                </div>
+                                <div class="cta tran">Buy Now</div>
+                            </div>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
+        <?php endif; ?>
     </div>
     <div class="right-wrapp">
         <?php if(!empty($productList)): ?>
@@ -21,7 +40,7 @@ $newProducts = array_slice($products,0,6);
             <div class="row">
                 <?php foreach($productList as $product): ?>
                     <div class="col-md-4 div col-sm-6">
-                        <a class="product-card disp-b">
+                        <a class="product-card disp-b" href='<?php echo $product['clickUrl']; ?>'>
                             <div class="img-wrapper">
                                 <img src="<?php echo $imgPath . $product['img'] ?>" alt="<?php echo $product['title']; ?>" class="img-responsive">
                             </div>
@@ -47,7 +66,7 @@ $newProducts = array_slice($products,0,6);
                 <div class="row">
                     <?php foreach($newProducts as $product): ?>
                         <div class="col-md-4 div col-sm-6">
-                            <a class="product-card disp-b">
+                            <a class="product-card disp-b" href='<?php echo $product['clickUrl']; ?>'>
                                 <div class="img-wrapper">
                                     <img src="<?php echo $imgPath . $product['img'] ?>" alt="<?php echo $product['title']; ?>" class="img-responsive">
                                 </div>
