@@ -59,14 +59,19 @@ body{font: 15px/140% Arial, sans-serif;}
 .pg-content .input-submit-wrapp{text-align:center;}
 .pg-content .input-submit{background:#f56256;padding:17px 40px;color:#fff;border-radius:10px;cursor:pointer;border:1px solid transparent}
 .pg-content .input-submit:hover{color:#f56256;border-color:#f56256;background:#fff}
+.pg-content .vendor-details{border:1px solid #cccc;padding:10px;border-radius:10px;margin-bottom:20px}
+.pg-content .vendor-details .line{margin-bottom:10px}
+.pg-content .vendor-details a{color:darkturquoise}
 
 .main-product{margin-bottom:20px}
-.main-product .img-wrapper{width:400px;float:left;border:1px solid #ccc}
-.main-product .content-wrapper{float:right;width:calc(100% - 430px)}
+.main-product .img-wrapper{width:300px;height:300px;float:left;border:1px solid #ccc;position:relative;}
+.main-product .img-wrapper img{position:relative;top:50%;transform:translateY(-50%);max-height:100%}
+.main-product .content-wrapper{float:right;width:calc(100% - 330px)}
 .main-product .title{font-size:22px;line-height:32px;font-weight:700;columns: #f56256;margin-bottom:10px;}
 .main-product .description{font-size:14px;line-height:24px;}
 .main-product .description p{margin-bottom:5px}
-.main-product .price{font-size:20px;line-height:30px;color:#f56256;font-weight:500}
+.main-product .price{font-size:20px;line-height:30px;color:#f56256;font-weight:500;display:inline-block;margin-right:20px}
+.main-product .cta{padding:15px 35px;border:1px solid #f56256;border-radius:10px;color:#f56256}
 
 @media (max-width:1024px){
     .left-wrapp {float: none;width: 300px;position: absolute;top:0;z-index: 1;}

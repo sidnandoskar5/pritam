@@ -3,26 +3,29 @@
 $id = $_GET['id'];
 $mainProduct = getProductsDetails($products, $id);
 $newProducts = array_slice($products,0,6);
-
 ?>
 <section class='detail-page'>
     <div class="container">
-        <?php if(!empty($mainProduct)){ ?>
+        <?php
+            if(!empty($mainProduct)){ 
+                foreach($mainProduct as $prod){
+        ?>
         <div class="main-product clearfix">
             <div class="img-wrapper">
-                <img src="<?php echo $imgPath . $mainProduct[0]['img'] ?>" alt="<?php echo $mainProduct[0]['title']; ?>" class="img-responsive">
+                <img src="<?php echo $imgPath . $prod['img'] ?>" alt="<?php echo $prod['title']; ?>" class="img-responsive">
             </div>
             <div class="content-wrapper">
-                <div class="title"><?php echo $mainProduct[0]['title']; ?></div>
+                <div class="title"><?php echo $prod['title']; ?></div>
                 <div class="description">
-                    <?php foreach($mainProduct[0]['description'] as $data){
+                    <?php foreach($prod['description'] as $data){
                         echo "<p class='desc'>".$data."</p>";
                     } ?>
                 </div>
-                <div class="price"><?php echo $mainProduct[0]['sellPrice']; ?></div>
+                <div class="price"><?php echo $prod['sellPrice']; ?></div>
+                <span class='cta'>Buy Product</span>
             </div>
         </div>
-        <?php }else{ ?>
+        <?php }}else{ ?>
             <h2 class="no-results">Product details are not available. Please try something else.</h2>
         <?php } ?>
         <?php if(!empty($newProducts)): ?>

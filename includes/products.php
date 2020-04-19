@@ -64,7 +64,10 @@ $products = [
     [
         'id'=> '2',
         'title' => 'HP WIRED C-2500 COMBO Keyboard',
-        'description' => ['',''],
+        'description' => [
+            'Dolore est amet anim sunt mollit officia reprehenderit ut labore excepteur. Exercitation irure laboris nostrud occaecat. Qui qui ullamco reprehenderit tempor elit Lorem ipsum. Exercitation elit aliqua laboris labore ut ad occaecat culpa aute.',
+            'Elit irure labore sunt sunt culpa incididunt Lorem exercitation dolor sit duis est. Laborum non voluptate aliqua consequat. Voluptate non Lorem laboris labore tempor incididunt. Sit eu exercitation consequat incididunt eiusmod do commodo tempor irure sunt. Minim nulla do voluptate in officia id aliqua proident quis. Lorem minim est deserunt qui qui ea.'
+        ],
         'originalPrice' => 'Rs. 70000',
         'sellPrice' => 'Rs. 850 /-',
         'category' => 'hw',
